@@ -21,7 +21,7 @@ namespace MSPMaterial
             GC.Collect();
             if (!createdNew)
             {
-                MessageBox.Show(" MSP 物料系統已在運作中！", "系統提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(" MSP 物料系統已在運作中！", "系統提示!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
             else
