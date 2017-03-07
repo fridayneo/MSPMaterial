@@ -23,6 +23,9 @@ namespace MSPMaterial.View
         public frmLogin()
         {
             InitializeComponent();
+            // 在 Load 事件撰寫讀取設定程式碼
+            // 讀取設定到帳號 TextBox.Text
+            this.txtAccount.Text = MSPMaterial.Properties.Settings.Default.UserNameSetting;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -50,10 +53,19 @@ namespace MSPMaterial.View
                 int id = int.Parse(txtAccount.Text);
                 if (db.checkLogin(id, password))
                 {
+                    if (checkBox1.Checked == true)
+                    {
+                        // 在 FormClosing 事件撰寫儲存設定程式碼
+                        // 將帳號 TextBox.Text 儲存到 UsernameSetting
+                        MSPMaterial.Properties.Settings.Default.UserNameSetting = this.txtAccount.Text;
+                        MSPMaterial.Properties.Settings.Default.Save();
+                    }
+
                     this.Close();
                     thread = new Thread(openMainForm);
                     thread.SetApartmentState(ApartmentState.STA);
                     thread.Start();
+                    
                 }
                 else
                 {

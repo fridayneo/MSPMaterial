@@ -10,5 +10,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">server=localhost;user id=bbdry_msp;password=msp!@#$%^&amp;*(;database=bbdrytw1_msp_materials</Value>
     </Setting>
+    <Setting Name="UserNameSetting" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

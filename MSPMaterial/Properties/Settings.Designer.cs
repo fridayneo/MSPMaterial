@@ -33,5 +33,17 @@ namespace MSPMaterial.Properties {
                 return ((string)(this["bbdrytw1_msp_materialsConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserNameSetting {
+            get {
+                return ((string)(this["UserNameSetting"]));
+            }
+            set {
+                this["UserNameSetting"] = value;
+            }
+        }
     }
 }
